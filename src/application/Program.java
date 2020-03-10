@@ -1,5 +1,7 @@
 package application;
 
+
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -35,6 +37,10 @@ public class Program {
 			System.out.println(se);
 		}
 		
+		System.out.println("===Test 4: seller Insert ===");
+		Seller seller3 = new Seller("Antorio", "antonio@gmail.com", new Date(), 5000.00, dep);
+		sellerDao.insert(seller3);
+		System.out.println("Inserted! New id= " + seller3.getId());
 	}
 
 }
